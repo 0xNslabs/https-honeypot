@@ -179,7 +179,7 @@ class SimpleHTTPServer:
                     img_content = img_response.content
                     mime_type, _ = guess_type(img_url)
                     if not mime_type:
-                        mime_type = "image/jpeg"  # Default MIME type
+                        mime_type = "image/jpeg"
                     data_url = f"data:{mime_type};base64," + base64.b64encode(img_content).decode()
                     img['src'] = data_url
                 except Exception as e:
